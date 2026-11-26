@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/toggle"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:text="Démarrer"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Niveau micro" />
+
+        <ProgressBar
+            android:id="@+id/meterIn"
+            style="@android:style/Widget.Material.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="1000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Niveau sortie" />
+
+        <ProgressBar
+            android:id="@+id/meterOut"
+            style="@android:style/Widget.Material.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="1000" />
+
+        <TextView
+            android:id="@+id/feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/gainLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <SeekBar
+            android:id="@+id/gain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="40"
+            android:progress="20" />
+
+        <TextView
+            android:id="@+id/gateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <SeekBar
+            android:id="@+id/gate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="40"
+            android:progress="20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Options (appliquées au démarrage)"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/swAec"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:checked="true"
+            android:text="Annulation d'écho (AEC)" />
+
+        <Switch
+            android:id="@+id/swNs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:checked="true"
+            android:text="Réduction de bruit" />
+
+        <Switch
+            android:id="@+id/swAgc"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:checked="false"
+            android:text="Gain automatique" />
+
+        <Switch
+            android:id="@+id/swGate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:checked="true"
+            android:text="Porte de bruit (coupe l'écho résiduel)" />
+
+        <Switch
+            android:id="@+id/swFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:checked="true"
+            android:text="Anti-larsen automatique" />
+
+        <Switch
+            android:id="@+id/swSpeaker"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:checked="true"
+            android:text="Haut-parleur (sinon écouteur / casque)" />
+
+        <TextView
+            android:id="@+id/report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>
